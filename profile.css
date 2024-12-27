@@ -1,0 +1,363 @@
+/* Profile Section */
+.profile-section {
+    padding: 120px 2rem 4rem;
+    min-height: calc(100vh - 300px);
+    background: #f9f9f9;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-avatar-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+}
+
+#avatar-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.avatar-upload-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--dhl-red);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.avatar-upload-btn:hover {
+    background: #b00;
+    transform: scale(1.1);
+}
+
+/* Profile Form */
+.profile-form {
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--dhl-red);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 5, 17, 0.1);
+}
+
+.form-divider {
+    text-align: center;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.form-divider::before,
+.form-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 60px);
+    height: 1px;
+    background: #eee;
+}
+
+.form-divider::before {
+    left: 0;
+}
+
+.form-divider::after {
+    right: 0;
+}
+
+.form-divider span {
+    background: var(--white);
+    padding: 0 1rem;
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+/* Preferences Grid */
+.preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.preference-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: var(--transition);
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: var(--transition);
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--dhl-red);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Form Actions */
+.form-actions {
+    text-align: center;
+}
+
+.save-btn {
+    padding: 1rem 2rem;
+    background: var(--dhl-red);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.save-btn:hover {
+    background: #b00;
+    transform: translateY(-2px);
+}
+
+/* Danger Zone */
+.danger-zone {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+}
+
+.danger-zone h2 {
+    color: #dc3545;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.danger-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.change-password-btn,
+.delete-account-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.change-password-btn {
+    background: #f8f9fa;
+    color: var(--text-dark);
+}
+
+.change-password-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.delete-account-btn {
+    background: #dc3545;
+    color: var(--white);
+}
+
+.delete-account-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cancel-btn,
+.confirm-btn,
+.delete-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cancel-btn {
+    background: #f8f9fa;
+    color: var(--text-dark);
+}
+
+.confirm-btn {
+    background: var(--dhl-red);
+    color: var(--white);
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: var(--white);
+}
+
+.cancel-btn:hover,
+.confirm-btn:hover,
+.delete-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 100px 1rem 2rem;
+    }
+
+    .profile-container {
+        padding: 1.5rem;
+    }
+
+    .danger-actions {
+        flex-direction: column;
+    }
+
+    .change-password-btn,
+    .delete-account-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-container {
+    animation: slideIn 0.3s ease;
+} 

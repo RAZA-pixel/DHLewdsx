@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHL Clone - Track Your Shipments</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/dhl-logo.png" alt="DHL Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="tracking.html">Track</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons animate__animated animate__fadeIn">
+                <!-- Guest View -->
+                <div class="guest-view">
+                    <a href="login.html" class="login-btn">Log In</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+                <!-- User Menu (Hidden by default) -->
+                <div class="user-menu" style="display: none;">
+                    <button class="user-btn">
+                        <img src="images/avatar.jpg" alt="User Avatar" id="profile-avatar">
+                        <span class="user-name">User</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                        <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>Track Your Shipment Anytime, Anywhere!</h1>
+            <div class="tracking-box animate__animated animate__fadeInUp animate__delay-1s">
+                <input type="text" id="tracking-input" placeholder="Enter your tracking number...">
+                <button id="track-btn">Track Shipment</button>
+            </div>
+            <div id="error-message" class="error-message"></div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-container">
+            <div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+                <i class="fas fa-globe"></i>
+                <h3>Global Coverage</h3>
+                <p>Track shipments worldwide with real-time updates</p>
+            </div>
+            <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
+                <i class="fas fa-clock"></i>
+                <h3>24/7 Service</h3>
+                <p>Round-the-clock tracking and support</p>
+            </div>
+            <div class="feature-card animate__animated animate__fadeInUp animate__delay-3s">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Shipping</h3>
+                <p>Your packages are safe with us</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Track Shipment</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@dhlclone.com</p>
+                <p>Phone: 1-800-SHIP-DHL</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DHL Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html> 

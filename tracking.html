@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHL Clone - Track Shipment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tracking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/dhl-logo.png" alt="DHL Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tracking.html" class="active">Track</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tracking Details Section -->
+    <section class="tracking-details">
+        <div class="tracking-container animate__animated animate__fadeIn">
+            <div class="tracking-header">
+                <h2>Shipment Details</h2>
+                <div class="tracking-number">
+                    Tracking Number: <span id="display-tracking"></span>
+                </div>
+            </div>
+
+            <div class="shipment-status">
+                <div class="status-badge" id="status-badge">
+                    <!-- Status will be inserted here -->
+                </div>
+                <div class="estimated-delivery">
+                    Estimated Delivery: <span id="estimated-delivery"></span>
+                </div>
+            </div>
+
+            <div class="shipment-timeline">
+                <h3>Shipment History</h3>
+                <div class="timeline" id="timeline">
+                    <!-- Timeline will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Track Shipment</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@dhlclone.com</p>
+                <p>Phone: 1-800-SHIP-DHL</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DHL Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <script src="tracking.js"></script>
+</body>
+</html> 
